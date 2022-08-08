@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Text, View} from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
-const HelloWorldApp = () => {
+const App = () => {
+  // add splash screen
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <View
       style={{
@@ -13,4 +19,4 @@ const HelloWorldApp = () => {
     </View>
   );
 };
-export default HelloWorldApp;
+export default App;
